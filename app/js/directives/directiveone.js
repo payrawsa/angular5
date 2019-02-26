@@ -12,9 +12,8 @@
             scope: {
                 testName: '=testName'
             },
-            templateUrl: 'js/directives/test.html'        };
+            templateUrl: 'templates/test.html'        };
 
     }]);
-
 
 })(myApp);
