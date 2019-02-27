@@ -16,22 +16,39 @@ const bodyParser = require('body-parser'); //needed to parse information from a 
 app.use(bodyParser.json());
 
 var mysql      = require('mysql');
-var connection = mysql.createConnection({
+var con = mysql.createConnection({
   host     : 'localhost',
-  user     : 'me',
-  password : 'password',
-  database : 'pcoin'
+  port: '3306',
+  user     : 'root',
+  password : 'root'
 });
 
-connection.connect();
-
-connection.query('SELECT 1 + 1 AS solution', function (error, results, fields) {
-  if (error) throw error;
-  console.log('The solution is: ', results[0].solution);
+con.connect((err) => {
+  if(err){
+    console.log('Error connecting to Db');
+    return;
+  }
+  console.log('Connection established');
 });
 
-connection.end();
+app.post('/submit',function(req,res){
 
+var id=req.body.id;
+
+var name=req.body.name;
+
+var sql = "insert into circle (id, name) values ('"+id+"', '"+name+"')";
+
+con.query(sql, function (err, result) {
+
+if (err) throw err;
+
+console.log("1 record inserted");
+
+res.end();
+
+});
+});
 
 app.listen(8000, () => {
   console.log('Server started!');

@@ -5,8 +5,9 @@ myApp.
         when('/Pcoin', {
           templateUrl: 'templates/what is Pcoin.html'
         }).
-        when('/test', {
-          template: '<directive-one></directive-one>'
+        when('/cars', {
+          templateUrl: 'templates/cars.html',
+          controller: 'controllerone'
         }).
         when('/', {
           templateUrl: 'templates/welcome home.html'

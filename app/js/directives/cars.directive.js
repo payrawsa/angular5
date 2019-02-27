@@ -1,7 +1,7 @@
 (function(myApp){
 
     'use strict';
-    myApp.directive('directiveOne',
+    myApp.directive('cars',
     [function(){
         var controller = ['$scope', function($scope){
             $scope.testTwo = "this is a test of the directive";
@@ -10,9 +10,9 @@
             restrict : 'EA',
             controller: controller,
             scope: {
-                testName: '=testName'
+                car: '='
             },
-            templateUrl: 'templates/test.html'        };
+            templateUrl: 'templates/car.directive.html'        };
 
     }]);
 
