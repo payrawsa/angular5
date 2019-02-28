@@ -15,41 +15,10 @@ const cors = require('cors') //needed for api access
 const bodyParser = require('body-parser'); //needed to parse information from a get or put or post
 app.use(bodyParser.json());
 
-var mysql      = require('mysql');
-var con = mysql.createConnection({
-  host     : 'localhost',
-  port: '3306',
-  user     : 'root',
-  password : 'root'
-});
+var initial_sql = require('./Database Commands/initial.js');
 
-con.connect((err) => {
-  if(err){
-    console.log('Error connecting to Db');
-    return;
-  }
-  console.log('Connection established');
-});
+initial_sql;
 
-app.post('/submit',function(req,res){
-
-var id=req.body.id;
-
-var name=req.body.name;
-
-var sql = "insert into circle (id, name) values ('"+id+"', '"+name+"')";
-
-con.query(sql, function (err, result) {
-
-if (err) throw err;
-
-console.log("1 record inserted");
-
-res.end();
-
-});
-});
-
-app.listen(8000, () => {
+app.listen(7000, () => {
   console.log('Server started!');
 });

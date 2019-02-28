@@ -1,0 +1,58 @@
+[
+    {
+    "name":"BMW TA",
+    "value": "$140,000",
+    "description":"Speed, efficiency and luxury; this BMW has it ALL",
+    "seller": "John Snow",
+    "url": "https://media.wired.com/photos/59bafdf204afdc5248726f5c/master/w_2400,c_limit/BMW-TA.jpg"
+    },
+    {
+    "name":"Porsche 911",
+    "value": "$25,000",
+    "description":"This porsche 911 is guaranteed to get looks from everyone. That old Kia certainly isn't goingt to pass you on the highway!",
+    "seller": "John Snow",
+    "url": "https://www.cstatic-images.com/stock/570x380/28/img-508537927-1543520949528.jpg"
+    },
+    {
+    "name":"Audi Super",
+    "value": "$1,000,000",
+    "description":"0-60 in only 2.2 seconds and street legal? Say no more...",
+    "seller": "John Snow",
+    "url": "https://cdn.vox-cdn.com/uploads/chorus_image/image/59319581/A182669_medium.0.jpg"
+    },
+    {
+    "name":"Toyota Mini",
+    "value": "$10,000",
+    "description":"This car gets 80 miles per gallon. It may not be stylish, but you won't be paying for gas!",
+    "seller": "John Snow",
+    "url": "https://article.images.consumerreports.org/prod/content/dam/CRO%20Images%202017/Magazine-Articles/April/CR-Inline-top-picks-Toyota-Yaris-02-17"
+    },
+    {
+    "name":"Nissan Frontier",
+    "value": "$25,000",
+    "description":"Fully loaded SUV. 5 star crash rating. Buy now and drive home today!",
+    "seller": "John Snow",
+    "url": "https://www.cstatic-images.com/stock/570x380/51/img-87449141-1543521013951.jpg"
+    },
+    {
+    "name":"Mazda Super",
+    "value": "$75,000",
+    "description":"Drive 0-60 in 3 seconds. Great value for the money",
+    "seller": "John Snow",
+    "url": "https://img.newatlas.com/mazda-vision-coupe-wins-2018-concept-car-of-the-year-4.jpg?auto=format%2Ccompress&ch=Width%2CDPR&fit=crop&h=347&q=60&rect=0%2C106%2C1620%2C912&w=616&s=a40e38fdb6995f043b03589dd2e2bf6e"
+    },
+    {
+    "name":"Ferrari Bullet",
+    "value": "$250,000",
+    "description":"Not your typical car. Who doesn't want to be seen driving in a Ferrari anyways? And 0-60 in 0.5 seconds. ",
+    "seller": "John Snow",
+    "url": "https://amp.businessinsider.com/images/592f4169b74af41b008b5977-750-563.jpg"
+    },
+    {
+    "name":"BMW Future",
+    "value": "XXX",
+    "description":"Not currently for sale. Stay Tuned",
+    "seller": "John Snow",
+    "url": "https://www.mercedes-benz.com/wp-content/uploads/sites/3/2018/08/00-mercedes-benz-vision-eq-silver-arrow-2018-show-car-world-premiere-3400x1440.jpg"
+    }
+]
