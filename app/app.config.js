@@ -7,7 +7,7 @@ myApp.
         }).
         when('/cars', {
           templateUrl: 'templates/cars.html',
-          controller: 'controllerone'
+          controller: 'cars'
         }).
         when('/', {
           templateUrl: 'templates/welcome home.html'

@@ -1,18 +1,20 @@
-app.post('/submit',function(req,res){
 
-var id=req.body.id;
+module.exports = function(app){
 
-var name=req.body.name;
+app.get('/available_cars',function(req,res, next){
 
-var sql = "insert into circle (id, name) values ('"+id+"', '"+name+"')";
+var car_list = "select * from car_list";
 
-con.query(sql, function (err, result) {
+con.query(car_list, function (err, result) {
 
 if (err) throw err;
 
-console.log("1 record inserted");
+console.log("records successfully returned");
+console.log(result);
 
-res.end();
+
+res.json(200, result);
 
 });
 });
+}
