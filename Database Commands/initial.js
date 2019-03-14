@@ -22,7 +22,9 @@ var create_database = "CREATE DATABASE IF NOT EXISTS blockchain";
 
 var insert = "INSERT INTO `car_list` (`id`, `name`, `value`, `description`, `seller`, `url`) VALUES ?";
 
-var create_table = "CREATE TABLE IF NOT EXISTS `car_list` (`id` int(11) AUTO_INCREMENT,`name` varchar(60) DEFAULT NULL,`value` varchar(20) DEFAULT NULL,`description` LONGTEXT DEFAULT NULL, `seller` varchar(50) DEFAULT NULL, `url` varchar(300) DEFAULT NULL, PRIMARY KEY (`id`))";
+var create_car_table = "CREATE TABLE IF NOT EXISTS `car_list` (`id` int(11) AUTO_INCREMENT,`name` varchar(60) DEFAULT NULL,`value` varchar(20) DEFAULT NULL,`description` LONGTEXT DEFAULT NULL, `seller` varchar(50) DEFAULT NULL, `url` varchar(300) DEFAULT NULL, PRIMARY KEY (`id`))";
+
+var create_user_table = "CREATE TABLE IF NOT EXISTS `user_list` (`id` int(11) AUTO_INCREMENT, `userId` varchar(20) default null, `name` varchar(60) DEFAULT NULL,`password` varchar(30) DEFAULT NULL, `balance` int(11) DEFAULT 500, PRIMARY KEY (`id`), UNIQUE(userId))"
 
 var drop_table ="delete from car_list";
 
@@ -32,10 +34,18 @@ con.query(create_database, function (err, result) {
 });
 
 con.query("use blockchain");
-
-con.query(create_table, function (err, result) {
+con.query("drop table user_list")
+con.query(create_car_table, function (err, result) {
   if (err) throw err;
   console.log("Table created!");
+});
+
+con.query(create_user_table, function(err,result){
+
+  if (err) {
+    throw err;
+  }
+  console.log("user table ready")
 });
 
 var cars = require('./../JSON/cars');

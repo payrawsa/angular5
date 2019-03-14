@@ -11,15 +11,18 @@
         <script src="/angular-route"></script>
         <script src="/js/app.js" charset="utf-8"></script>
         <script src="/js/controllers/cars.controller.js" charset="utf-8"></script>
+        <script src="/js/controllers/user.controller.js" charset="utf-8"></script>
+        <script src="/js/controllers/user.service.js" charset="utf-8"></script>
         <script src="/js/directives/cars.directive.js"></script>
+        <script src="/js/directives/login.directive.js" charset="utf-8"></script>
         <script src="/js/directives/nav-bar.js" charset="utf-8"></script>
+        <script src="/js/directives/createUser.directive.js" charset="utf-8"></script>
         <script src="/app.config.js"></script>
     </head>
-    <body ng-app = "myApp" style= "background:#2E4E73">
+    <body ng-app = "myApp">
     <div class="container">
         <nav-directive></nav-directive>
         <div ng-view></div>
     </div>
-
     </body>
 </html>

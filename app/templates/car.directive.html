@@ -1,6 +1,17 @@
-  <div class="card">
-    <img class="card-img" ng-src={{car}} style="width: 22rem; height: 15rem">
+<div class="col-lg">
+  <div class="card" style="width: 20rem;">
+    <h5 class="card-header">{{car.name}}</h5>
+    <img class="card-img-top" ng-src="{{car.url}}" alt="Card image cap" style="width:18rem; height:14rem">
     <div class="card-body">
-            <h3>This car could be yours!</h3>
-        </div>
+      <p class="card-text" style="width:18rem; height:6rem">{{car.description}}</p>
+    </div>
+      <ul class="list-group list-group-flush">
+
+        <li class="list-group-item"><b>Seller: </b>{{car.seller}}</li>
+        <li class="list-group-item"><b>Price: </b>{{car.value}}</li>
+      </ul>
+<form ng-submit="submit(car)">
+<button type="submit"> Purchase </button>
+</form>
   </div>
+</div>

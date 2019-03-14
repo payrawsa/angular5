@@ -4,7 +4,9 @@
     myApp.directive('cars',
     [function(){
         var controller = ['$scope', function($scope){
-            $scope.testTwo = "this is a test of the directive";
+          $scope.submit = function(car) {
+              console.log( "the car is: ", parseInt(car.value));
+          }
         }];
         return {
             restrict : 'EA',
@@ -12,7 +14,8 @@
             scope: {
                 car: '='
             },
-            templateUrl: 'templates/car.directive.html'        };
+            templateUrl: 'templates/car.directive.html'
+          };
 
     }]);
 

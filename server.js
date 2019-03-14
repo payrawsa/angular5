@@ -18,7 +18,6 @@ var con = initial_sql.con;
 var crud = require('./Database Commands/crud.js')(app);
 initial_sql;
 
-
 app.listen(7000, () => {
   console.log('Server started!');
 });

@@ -6,6 +6,7 @@
 
         var controller = ['$scope', function($scope){
             $scope.purchases = "purchases.html";
+            
 
         }];
         return {
